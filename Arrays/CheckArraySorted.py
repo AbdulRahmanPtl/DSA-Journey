@@ -3,6 +3,7 @@
 # Time: O(n)
 # Space: O(1)
 
+# LeetCode
 # Approach - 1
 def checkArraySorted(nums:list):
     mark = -1
@@ -22,7 +23,7 @@ def checkArraySorted(nums:list):
     return True if nums[0] > nums[-1] or mark == -1 else False
     
 # Approach - 2
-def checkArraySorted(nums:list)
+def checkArraySorted(nums:list):
     count = 0
     n = len(nums)
     
@@ -32,4 +33,19 @@ def checkArraySorted(nums:list)
         if count > 1:
             return False
     
+    return True
+
+
+# GeeksForGeeks Problem
+
+def checkArraySorted(arr:list):
+    n = len(arr)
+    
+    if n < 2:
+        return True
+    
+    for i in range(1, n):
+        if arr[i] < arr[i-1]:
+            return False
+        
     return True
